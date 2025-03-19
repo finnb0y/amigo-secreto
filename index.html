@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Prêmios</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Sorteio de Prêmios</h1>
+        
+        <div class="section" id="add-friend-section">
+            <h2>Adicionar Amigo</h2>
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <label for="friend-name">Nome:</label>
+                    <input type="text" id="friend-name" placeholder="Digite o nome">
+                </div>
+                <div class="input-wrapper">
+                    <label for="discord-user">Usuário Discord:</label>
+                    <input type="text" id="discord-user" placeholder="Digite o usuário do Discord">
+                </div>
+                <button id="add-friend-btn">Adicionar Amigo</button>
+            </div>
+        </div>
+
+        <div class="section" id="friends-list-section">
+            <h2>Lista de Amigos</h2>
+            <ul id="friends-list"></ul>
+            <div id="prize-button-container" style="display: none;">
+                <button id="show-add-prize-btn">Adicionar Prêmio</button>
+            </div>
+        </div>
+
+        <div class="section" id="add-prize-section" style="display: none;">
+            <h2>Adicionar Prêmio</h2>
+            <div class="input-group">
+                <div class="input-wrapper">
+                    <label for="prize-name">Nome do Prêmio:</label>
+                    <input type="text" id="prize-name" placeholder="Digite o nome do prêmio">
+                </div>
+                <div class="input-wrapper">
+                    <label for="prize-icon">Ícone do Prêmio:</label>
+                    <input type="file" id="prize-icon" accept="image/*">
+                </div>
+                <button id="add-prize-btn">Adicionar Prêmio</button>
+            </div>
+        </div>
+
+        <div class="section" id="prizes-list-section" style="display: none;">
+            <h2>Prêmios Disponíveis</h2>
+            <ul id="prizes-list"></ul>
+            <button id="start-raffle-btn">Começar Sorteio</button>
+        </div>
+
+        <div class="section" id="raffle-section" style="display: none;">
+            <h2>Sorteio em Andamento</h2>
+            <div class="roulette-container">
+                <div class="roulette" id="roulette"></div>
+            </div>
+            <div id="winner-display" style="display: none;">
+                <h2>Resultado do Sorteio</h2>
+                <div class="winner-info">
+                    <div class="winner-prize">
+                        <img id="winner-prize-icon" src="" alt="Ícone do Prêmio">
+                        <h3 id="winner-prize-name"></h3>
+                    </div>
+                    <div class="winner-person">
+                        <h3>Vencedor:</h3>
+                        <p id="winner-name"></p>
+                        <p id="winner-discord"></p>
+                    </div>
+                </div>
+                <div class="action-buttons">
+                    <button id="new-prize-btn">Adicionar Prêmio</button>
+                    <button id="next-prize-btn" style="display: none;">Sortear Próximo Prêmio</button>
+                    <button id="new-raffle-btn">Novo Sorteio</button>
+                </div>
+                <div id="include-winners-wrapper" style="display: none;">
+                    <input type="checkbox" id="include-previous-winners" checked>
+                    <label for="include-previous-winners">Incluir ganhadores anteriores</label>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="sortear_amigo.js"></script>
+</body>
+</html>
